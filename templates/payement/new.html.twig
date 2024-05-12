@@ -1,0 +1,26 @@
+{# templates/payement/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Payment Form{% endblock %}
+
+{% block body %}
+    <h1>Payment Form</h1>
+    <h2>Billing Information</h2>
+    {{ form_start(form) }}
+        {{ form_row(form.fullName) }}
+        {{ form_row(form.country) }}
+        {{ form_row(form.address) }}
+        {{ form_row(form.state) }}
+        {{ form_row(form.phoneNumber) }}
+        {{ form_row(form.zipCode) }}
+         <h2> payment information</h2>
+        {{ form_row(form.paymentMethod) }}
+        {{ form_row(form.expirationDate) }}
+        {{ form_row(form.cardNumber) }}
+        {{ form_row(form.securityCode) }} 
+        {{ form_row(form.payementTotal) }}
+        {{ form_row(form.payementDate) }}
+        <button type="submit" class="btn btn-primary">Confirmer le paiement</button>
+    {{ form_end(form) }}
+{% endblock %}
